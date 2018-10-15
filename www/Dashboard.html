@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/angular-material.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/materialize.min.js"></script>
+  <script src="angular/angular.min.js"></script>
+  <script src="js/sweetalert.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+  <script src="angular/angular-sanitize.min.js"></script>
+  <script src="angular/ng-file-upload.min.js"></script>
+  <script src="angular/ui-bootstrap-tpls.min.js"></script>
+  <script src="angular/angular-material.min.js"></script>
+  <script src="angular/DashboardCtrl.js"></script>
+</head>
+<body ng-app="App" ng-controller="DashboardCtrl">
+	
+	<div ng-include="'mainMenu.html'"></div>
+	
+	<!-- <div class="carousel carousel-slider center">
+    <div class="carousel-item red white-text" href="#one!">
+      
+      <div class="video-container">
+        <video class="responsive-video" controls>
+			<source src="movie.mp4" type="video/mp4">
+		</video>
+		<h2>First Panel</h2>
+      </div>
+        
+    </div>
+    <div class="carousel-item amber white-text" href="#two!">
+      <h2>Second Panel</h2>
+      <p class="white-text">This is your second panel</p>
+    </div>
+    <div class="carousel-item green white-text" href="#three!">
+      <h2>Third Panel</h2>
+      <p class="white-text">This is your third panel</p>
+    </div>
+    <div class="carousel-item blue white-text" href="#four!">
+      <h2>Fourth Panel</h2>
+      <p class="white-text">This is your fourth panel</p>
+    </div>
+  </div> -->
+<div class="container-fluid" ng-cloak>
+  <div class="row" style="margin:0 auto !important;">
+  <div class="col s6">
+    <!-- <h1 class="md-title">Pick a vegetable below</h1> -->
+   
+      <md-input-container>
+        <label></label>
+        <md-select ng-model="selectedLanguages" ng-change="selectedLanguagefun()"
+                   md-on-close="clearSearchTerm()"
+                   data-md-container-class="selectdemoSelectHeader"
+                   multiple  md-selected-text="selectedlangtext">
+          <md-select-header class="demo-select-header">
+            <input ng-model="searchTerm"
+                   type="search"
+                   placeholder="Search for a language.."
+                   class="demo-header-searchbox md-text">
+          </md-select-header>
+          <md-optgroup label="Language">
+            <md-option ng-value="obj.code" ng-repeat="obj in languageArray |
+              filter:searchTerm">{{obj.name}} - {{obj.nativeName}}</md-option>
+          </md-optgroup>
+        </md-select>
+      </md-input-container>
+ </div>
+
+ <div class="col s6">
+    <!-- <h1 class="md-title">Pick a vegetable below</h1> -->
+      <md-input-container>
+        <label></label>
+        <md-select ng-model="selectedCatagory" ng-change="selectCatagoryfun()"
+                   md-on-close="clearSearchTerm()"
+                   data-md-container-class="selectdemoSelectHeader"
+                   multiple  md-selected-text="selectedCattext">
+          <md-select-header class="demo-select-header">
+            <input ng-model="searchTerm"
+                   type="search"
+                   placeholder="Search for a Type.."
+                   class="demo-header-searchbox md-text">
+          </md-select-header>
+          <md-optgroup label="Language">
+            <md-option ng-value="obj.code" ng-repeat="obj in CatagoryArray |
+              filter:searchTerm">{{obj.name}}</md-option>
+          </md-optgroup>
+        </md-select>
+      </md-input-container>
+ </div>
+ </div>
+ <div class="row">
+	<div class="video-container">
+        <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+ </div>
+ <div class="row">
+	 <div class="col s12 m8 offset-m2 l6 offset-l3" ng-repeat="data in [1,2,3,4,5,6,7,8,9,10]">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="images/yuna.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                This is a square image. Add the "circle" class to it to make it appear circular.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+ </div>
+</div>
+</body>
+</html>

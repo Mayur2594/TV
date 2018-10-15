@@ -1,0 +1,25 @@
+	[
+	
+	{
+        "name":"Marathi (Marāṭhī)",
+        "nativeName":"मराठी",
+		"code":"mr"
+    },
+	{
+        "name":"Hindi",
+        "nativeName":"हिन्दी, हिंदी",
+		"code":"hi"
+    },{
+         "name":"English",
+        "nativeName":"English",
+		"code":"en"
+    },{
+         "name":"Urdu",
+        "nativeName":"اردو",
+		"code":"ur"
+    },{
+         "name":"Urdu",
+        "nativeName":"اردو",
+		"code":"ur"
+    },
+	]

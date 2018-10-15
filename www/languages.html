@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/materialize.min.js"></script>
+  <script src="angular/angular.min.js"></script>
+  <script src="js/sweetalert.min.js"></script>
+  <script src="angular/angular-sanitize.min.js"></script>
+  <script src="angular/ng-file-upload.min.js"></script>
+  <script src="angular/ui-bootstrap-tpls.min.js"></script>
+  <script src="angular/DashboardCtrl.js"></script>
+</head>
+<body ng-app="App" ng-controller="DashboardCtrl">
+	
+	<div ng-include="'mainMenu.html'"></div>
+	
+	<div class="container mt-4 my-4">
+	<div class="col s12">
+			<label>
+				<input type="checkbox"/>
+				<span>Select All</span>
+			</label>
+	</div>
+	<div class="col s12" ng-repeat="obj in languageArray">
+			<label>
+				<input type="checkbox"/>
+				<span>{{obj.name}} - {{obj.nativeName}}</span>
+			</label>
+	</div>
+	</div>
+	
+</body>
+</html>
